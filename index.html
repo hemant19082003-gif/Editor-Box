@@ -1,210 +1,210 @@
+
+
 <html>
 <head>
-    <title>Student Registration Form</title>
+<title>Textora Editor</title>
+
+<style>
+
+
+body {
+    background:lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 650px;
+    
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px #0002;
+}
+
+h1 {
+    text-align: center;
+    color: #6d28d9;
+    margin-bottom: 8px;
+}
+
+p {
+    text-align: center;
+}
+
+.font {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+select, button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    cursor: pointer;
+    background: white;
+}
+
+
+
+button:hover {
+    background: #ede9fe;
+}
+
+.editor {
+    width: 90%;
+    height: 220px;
+    padding: 18px;
+    border: 2px solid #a488e5;
+    border-radius: 10px;
+    
+}
+
+.colors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.circle {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    cursor: pointer;
+}
+
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+
+</style>
 </head>
 
 <body>
 
-<h1 align="center">
-    <u><font color="#4B3CC4">STUDENT REGISTRATION FORM</font></u>
-</h1>
+<div class="box" style="background:rgb(250, 221, 225)">
 
-<table align="center" width="85%" cellpadding="10" bgcolor="#6657C9">
-<form>
+    <h1>Textora Editor</h1>
+    <p> Customize Your Text Your Way </p>
 
-<tr>
-<td><font color="white">FIRST NAME</font></td>
-<td>
-<input type="text" maxlength="30">
-<font color="white">(max 30 characters a-z and A-Z)</font>
-</td>
-</tr>
 
-<tr>
-<td><font color="white">LAST NAME</font></td>
-<td>
-<input type="text" maxlength="30">
-<font color="white">(max 30 characters a-z and A-Z)</font>
-</td>
-</tr>
+    <div class="font">
 
-<tr>
-<td><font color="white">DATE OF BIRTH</font></td>
-<td>
-<select>
-<option>Day:</option>
-</select>
+        <select id="fontFamily">
+            <option value="Arial">Arial</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Trebuchet MS">Trebuchet MS</option>
+            <option value="Impact">Impact</option>
+            <option value="Comic Sans MS">Comic Sans MS</option>
+            <option value="Lucida Console">Lucida Console</option>
+            <option value="Palatino Linotype">Palatino Linotype</option>
+            <option value="Tahoma">Tahoma</option>
+        </select>
 
-<select>
-<option>Month:</option>
-</select>
+        <select id="fontSize">
+            <option value="14px">14px</option>
+            <option value="16px">16px</option>
+            <option value="18px">18px</option>
+            <option value="22px">22px</option>
+            <option value="26px">26px</option>
+            <option value="32px">32px</option>
+            <option value="40px">40px</option>
+        </select>
 
-<select>
-<option>Year:</option>
-</select>
-</td>
-</tr>
+        </div>
 
-<tr>
-<td><font color="white">EMAIL ID</font></td>
-<td><input type="email"></td>
-</tr>
+    
+    <div class="editor"
+         id="editor"
+         contenteditable="true"
+         spellcheck="true">
+    </div>
 
-<tr>
-<td><font color="white">MOBILE NUMBER</font></td>
-<td>
-<input type="text" maxlength="10">
-<font color="white">(10 digit number)</font>
-</td>
-</tr>
+    <div>
+        <h3> Background Color</h3>
 
-<tr>
-<td><font color="white">GENDER</font></td>
-<td>
-<font color="white">
-Male <input type="radio" name="gender">
-Female <input type="radio" name="gender">
-</font>
-</td>
-</tr>
+        <div class="colors" >
 
-<tr>
-<td><font color="white">ADDRESS</font></td>
-<td>
-<textarea rows="5" cols="45"></textarea>
-</td>
-</tr>
+            <div class="circle" style="background:red" onclick="changeBackground('red')"></div>
+            <div class="circle" style="background:orange" onclick="changeBackground('orange')"></div>
+            <div class="circle" style="background:yellow" onclick="changeBackground('yellow')"></div>
+            <div class="circle" style="background:green" onclick="changeBackground('green')"></div>
+            <div class="circle" style="background:blue" onclick="changeBackground('blue')"></div>
+            <div class="circle" style="background:purple" onclick="changeBackground('purple')"></div>
+            <div class="circle" style="background:pink" onclick="changeBackground('pink')"></div>
+            <div class="circle" style="background:black" onclick="changeBackground('black')"></div>
+            <div class="circle" style="background:gray" onclick="changeBackground('gray')"></div>
+            <div class="circle" style="background:cyan" onclick="changeBackground('cyan')"></div>
+            <div class="circle" style="background:lime" onclick="changeBackground('lime')"></div>
+            <div class="circle" style="background:white" onclick="changeBackground('white')"></div>
 
-<tr>
-<td><font color="white">CITY</font></td>
-<td>
-<input type="text" maxlength="30">
-<font color="white">(max 30 characters a-z and A-Z)</font>
-</td>
-</tr>
+        </div>
+    </div>
 
-<tr>
-<td><font color="white">PIN CODE</font></td>
-<td>
-<input type="text" maxlength="6">
-<font color="white">(6 digit number)</font>
-</td>
-</tr>
 
-<tr>
-<td><font color="white">STATE</font></td>
-<td>
-<input type="text" maxlength="30">
-<font color="white">(max 30 characters a-z and A-Z)</font>
-</td>
-</tr>
+    <div>
+        <h3> Text Color </h3>
 
-<tr>
-<td><font color="white">COUNTRY</font></td>
-<td>
-<input type="text" value="India">
-</td>
-</tr>
+        <div class="colors">
 
-<tr>
-<td><font color="white">HOBBIES</font></td>
-<td>
-<font color="white">
-Drawing <input type="checkbox">
-Singing <input type="checkbox">
-Dancing <input type="checkbox">
-Sketching <input type="checkbox">
-<br>
-Others <input type="checkbox">
-<input type="text">
-</font>
-</td>
-</tr>
+            <div class="circle" style="background:black" onclick="changeTextColor('black')"></div>
+            <div class="circle" style="background:red" onclick="changeTextColor('red')"></div>
+            <div class="circle" style="background:blue"  onclick="changeTextColor('blue')"></div>
+            <div class="circle" style="background:green" onclick="changeTextColor('green')"></div>
+            <div class="circle" style="background:purple"  onclick="changeTextColor('purple')"></div>
+            <div class="circle" style="background:orange"  onclick="changeTextColor('orange')"></div>
+            <div class="circle" style="background:pink" onclick="changeTextColor('pink')"></div>
+            <div class="circle" style="background:white" onclick="changeTextColor('white')"></div>
+            <div class="circle" style="background:cyan" onclick="changeTextColor('cyan')"></div>
+            <div class="circle" style="background:brown" onclick="changeTextColor('brown')"></div>
+            <div class="circle" style="background:gray" onclick="changeTextColor('gray')"></div>
+            <div class="circle" style="background:lime" onclick="changeTextColor('lime')"></div>
 
-<tr>
-<td valign="top">
-<font color="white">QUALIFICATION</font>
-</td>
+        </div>
+    </div>
 
-<td>
-<table border="0" cellpadding="4">
-<tr>
-<th><font color="white">Sl.No.</font></th>
-<th><font color="white">Examination</font></th>
-<th><font color="white">Board</font></th>
-<th><font color="white">Percentage</font></th>
-<th><font color="white">Year of Passing</font></th>
-</tr>
+   
+    <div class="actions">
+        <button onclick="clearEditor()">Clear Text</button>
+        <button onclick="resetEditor()">Reset Style</button>
+    </div>
 
-<tr>
-<td><font color="white">1</font></td>
-<td><font color="white">Class X</font></td>
-<td><input type="text" maxlength="10"></td>
-<td><input type="text"></td>
-<td><input type="text"></td>
-</tr>
+</div>
 
-<tr>
-<td><font color="white">2</font></td>
-<td><font color="white">Class XII</font></td>
-<td><input type="text" maxlength="10"></td>
-<td><input type="text"></td>
-<td><input type="text"></td>
-</tr>
+<script>
 
-<tr>
-<td><font color="white">3</font></td>
-<td><font color="white">Graduation</font></td>
-<td><input type="text" maxlength="10"></td>
-<td><input type="text"></td>
-<td><input type="text"></td>
-</tr>
+const editor = document.getElementById("editor");
 
-<tr>
-<td><font color="white">4</font></td>
-<td><font color="white">Masters</font></td>
-<td><input type="text" maxlength="10"></td>
-<td><input type="text"></td>
-<td><input type="text"></td>
-</tr>
+function changeBackground(color) { editor.style.backgroundColor = color; }
+function changeTextColor(color) { editor.style.color = color; }
 
-<tr>
-<td></td>
-<td></td>
-<td><font color="white">(10 char max)</font></td>
-<td><font color="white">(upto 2 decimal)</font></td>
-<td></td>
-</tr>
+document.getElementById("fontFamily") .addEventListener("change", function() { editor.style.fontFamily = this.value; });
+document.getElementById("fontSize")   .addEventListener("change", function() { editor.style.fontSize = this.value; });
 
-</table>
-</td>
-</tr>
+function clearEditor() { editor.innerHTML = ""; }
+function resetEditor() {
+    editor.style.backgroundColor = "white";
+    editor.style.color = "black";
+    editor.style.fontFamily = "Arial";
+    editor.style.fontSize = "18px";
 
-<tr>
-<td>
-<font color="white">COURSES<br>APPLIED FOR</font>
-</td>
+    document.getElementById("fontFamily").value = "Arial";
+    document.getElementById("fontSize").value = "18px";
+}
 
-<td>
-<font color="white">
-BCA <input type="radio" name="course">
-B.Com <input type="radio" name="course">
-B.Sc <input type="radio" name="course">
-B.A <input type="radio" name="course">
-</font>
-</td>
-</tr>
-
-<tr>
-<td></td>
-<td align="center">
-<input type="submit" value="Submit">
-<input type="reset" value="Reset">
-</td>
-</tr>
-
-</form>
-</table>
+</script>
 
 </body>
 </html>
